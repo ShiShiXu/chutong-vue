@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/src/main.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/router/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/mian.js" />
+        <item url="file://$PROJECT_DIR$/dist/config/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/static/amazeui.js" />
+        <item url="file://$PROJECT_DIR$/dist/static/jquery-3.2.1.min.js" />
+        <item url="file://$PROJECT_DIR$/dist/.eslintrc.js" />
+        <item url="file://$PROJECT_DIR$/dist/build/webpack.base.conf.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/src/main.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/router/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/mian.js" />
+      <root url="file://$PROJECT_DIR$/dist/config/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/static/amazeui.js" />
+      <root url="file://$PROJECT_DIR$/dist/static/jquery-3.2.1.min.js" />
+      <root url="file://$PROJECT_DIR$/dist/.eslintrc.js" />
+      <root url="file://$PROJECT_DIR$/dist/build/webpack.base.conf.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
