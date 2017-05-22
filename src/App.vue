@@ -1,22 +1,18 @@
 <template>
   <div id="app">
-    <ct-header></ct-header>
-    <mian></mian>
+    <router-view></router-view>
     <ct-footer></ct-footer>
-<!--    <router-view></router-view>-->
   </div>
 </template>
 
 <script>
-import ctHeader from './components/header/header.vue';
 import ctFooter from './components/footer/footer.vue';
-import mian from './components/mian/mian.vue';
+import mainContent from './components/main/main.vue';
 
 export default {
   components: {
-    'ct-header': ctHeader,
     'ct-footer': ctFooter,
-    'mian': mian
+    'mainContent': mainContent
   }
 };
 </script>
@@ -25,7 +21,7 @@ export default {
   * {
     -webkit-appearance: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", sans-serif;
     &:before, &:after {
       box-sizing: border-box;
     }
@@ -40,4 +36,10 @@ export default {
   .am-with-topbar-fixed-top {
     padding: 0;
   }
+  @media only screen and (min-width: 641px) {
+    .am-topbar-nav>li>a:after {
+      border: 0 solid transparent;
+    }
+  }
+
 </style>

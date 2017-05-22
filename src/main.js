@@ -2,10 +2,10 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 
 import Vue from 'vue';
-import App from './App';
+import App from './App.vue';
 import router from './router';
 import $ from 'jquery';
-import amazeUI from '../static/amazeui.js';
+import amazeUI from '../static/js/amazeui.js';
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
@@ -15,3 +15,5 @@ new Vue({
   template: '<App/>',
   components: { App }
 });
+
+console.log($);

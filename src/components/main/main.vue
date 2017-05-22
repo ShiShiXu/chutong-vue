@@ -1,5 +1,7 @@
 <template>
-  <div id="main">
+  <div>
+    <ct-banner></ct-banner>
+    <div>
     <!-- 我们的优势 -->
     <div id="advantage-f" class="am-container">
       <div class="title">专业 高效 精准 分享</div>
@@ -91,20 +93,26 @@
       <div class="join">加入我们，成就下一个可能</div>
     </div>
   </div>
+  </div>
 </template>
 
 <script type="text/ecmascript-6">
   import $ from 'jquery';
+  import banner from '../banner/banner.vue';
   export default {
+    components: {
+      'ct-banner': banner
+    },
     /* 元素插入后可以用jquery获取页面元素 */
     created() {},
     mounted() {
       $(function() {
-        $('.pentagon-box').scrollspy({
+        var $pentagonBox = $('.pentagon-box');
+        $pentagonBox.scrollspy({
           animation: 'fade',
           delay: 0
         });
-        $('.pentagon-box').on('inview.scrollspy.amui', function() {
+        $pentagonBox.on('inview.scrollspy.amui', function() {
           console.log('五边形动画开始');
           $('.pentagon-box').addClass('pentagon-box-animation');
         }).on('outview.scrollspy.amui', function() {
@@ -118,9 +126,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" type="text/less" scoped>
-  #main {
-    /*background-color: rgba(216, 215, 215, 0.72);*/
-  }
   #advantage-f {
     .title {
       color: #3C3C42;

@@ -1,0 +1,187 @@
+html{ -webkit-text-size-adjust:none;}
+body{ font-size:14px; color: #333; margin:0 auto; padding:0; border:0;
+    font-family: "PingFang SC","Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;;
+}
+div{margin:0 auto; padding:0;}
+h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,form,img,p{ margin:0; padding:0; border:none; list-style-type:none;}
+.block{ width:960px; height:auto;}
+em,i{font-style:normal;}
+.f_l{float:left;}
+.f_r{float:right;}
+.tl{ text-align:left;}
+.tc{ text-align:center;}
+.tr{ text-align:right;}
+.dis{display:block;}
+.inline{display:inline;}
+.none{display:none;}
+
+a {outline:none; text-decoration:none; }
+a:hover { text-decoration:none; }
+a:focus { outline: none;}
+
+.clearfix:after{ content:"."; display:block; height:0; clear:both; visibility:hidden;}
+*html .clearfix{ height:1%;}
+*+html .clearfix{ height:1%;}
+/*英文强制换行*/
+.word{ word-break:break-all;}
+.mt30{ margin-top:30px;}
+
+/*页面留白*/
+.blank{ height:8px; line-height:8px; clear:both; visibility:hidden;}
+.blank5{ height:5px; line-height:5px; clear:both; visibility:hidden;}
+.blank10{ height:10px; line-height:10px; clear:both; visibility:hidden;}
+.am-g-fixed,.am-container{ max-width: 1200px;margin: 0 auto }
+
+/*头部样式*/
+/*首页-头部*/
+.am-with-topbar-fixed-top {
+    padding-top: 0;
+}
+#collapse-btn {
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,.6);
+    border-radius: 4px;
+}
+#collapse-btn:focus {
+    border: 1px solid rgba(255,255,255,1);
+    outline: initial;
+    outline: initial;
+}
+.cd-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.cd-header-container {
+    height: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#cd-header {
+    background-color: rgba(34,34,34,0);
+    transition: all .8s ease;
+}
+#cd-header .am-nav {
+    font-size: 16px;
+    margin: 0 auto;
+    float: right;
+}
+#cd-header .am-nav li{
+    width: 100px;
+    text-align: center;
+}
+#cd-header .am-nav>li>a {
+    line-height: 70px;
+}
+#cd-header .am-topbar-nav>li>a:after { border: none;}
+#cd-header .am-nav li.li-active:after {
+    display: inline-block;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    content: " ";
+    border: 2px solid #00afec;
+    width: 100px;
+    height: 2px;
+}
+#cd-header .am-with-topbar-fixed-top {
+    position: fixed;
+}
+#cd-header .am-topbar-nav>li>a:hover, #cd-header .am-topbar-nav>li>a:focus  {
+    background-color: rgba(0,0,0,0);
+}
+.am-topbar { border-width: 0;}
+.logo { padding: 5px 0px 0px 35px; overflow: hidden; height: 70px;}
+
+
+#cd-header {
+    background-color: rgba(34,34,34,0.8);
+    transition: all .8s ease;
+}
+#products-banner .banner-txt,#solution-banner .banner-txt,#business-banner .banner-txt,#about-banner .banner-txt{
+    max-width: 1000px;
+    margin: 0px auto 0px auto;
+    overflow: hidden;
+    padding-top: 300px;
+    position: relative;
+    z-index: 101;
+}
+#products-banner .banner-txt h1,#solution-banner .banner-txt h1,#business-banner .banner-txt h1{
+    font-size: 30px;
+    color: #2d3139;
+    line-height: 50px;
+    float: left;
+    width: 100%;
+}
+#products-banner .banner-txt p,#solution-banner .banner-txt p,#business-banner .banner-txt p,#about-banner .banner-txt p{
+    font-size: 16px;
+    color: #2d3139;
+    width: 100%;
+    line-height: 24px;
+    float: left;
+}
+
+
+/*底部样式*/
+#footer{
+    width: 100%;
+    color: #ffffff;
+    background:#172730;
+    position:relative;
+    z-index:100;
+    bottom: 0;
+    overflow: hidden;
+}
+.footer{
+    overflow: hidden;
+    margin: 0px auto;
+    padding-bottom: 20px;
+    max-width: 1000px;
+}
+.footer [class*="am-u-"]{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.contact_txt{
+    margin-top:60px;
+    float:left;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.contact_txt h1{
+    width:100%;
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:40px;
+    float:left;
+}
+.contact_tel{
+    float:left;
+    width: 500px;
+    height:63px;
+    background:url(../images/tel_pc.svg) no-repeat center center;
+    background-color: #5d6272;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.contact_txt p{ width:100%; float:left; line-height:24px; font-size:16px; padding-bottom:10px;}
+.ct-weixin{
+    margin-top:115px;
+    text-align: center;
+    float: right;
+}
+.chutong-wechat{
+    font-size:16px;
+    line-height:24px;
+    padding-top:15px;
+}
+.bottom{
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+    overflow: hidden;
+    border-top: 1px solid #4e5a61;
+    padding-top: 20px;
+}
+.bottom p{
+    font-size: 14px;
+}
