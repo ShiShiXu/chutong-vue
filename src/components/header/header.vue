@@ -25,9 +25,9 @@
             </div>
           </div>
       </header>
-      <div class="title">Business AI  &  Big data</div>
-      <div class="slogan">专注于人工智能的金融科技专家</div>
-      <div class="description">
+      <div class="title" data-am-scrollspy="{animation:'fade', delay: 300}">Business AI  &  Big data</div>
+      <div class="slogan" data-am-scrollspy="{animation:'fade', delay: 400}">专注于人工智能的金融科技专家</div>
+      <div class="description" data-am-scrollspy="{animation:'fade', delay: 500}">
         大数据、机器学习的先进技术大爆发，新的时代已经到来<br>
         我们希望能成为新时代的引领者，所以我们专注于新一代人工智能在金融行业的应用<br>
         提供系统建设、数据运营、智能风控、安全管理等精准化解决方案

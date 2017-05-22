@@ -49,11 +49,12 @@
     <div id="advantage-s" class="am-container">
       <div class="title">定制化 维度全 可信赖</div>
       <div class="slogan">根据金融行业的实际业务需求，我们不断精益求精，推出一系列金融科技服务与解决方案</div>
+
       <div class="pentagon-box">
         <img class="pentagon" src="../../assets/images/pentagon.svg" width="545" height="545">
 
-        <div class="pentagon-scale">
-          <img src="../../assets/images/pentagon-move.svg" width="545" height="545">
+        <div class="pentagon-scale pentagon-box-animation">
+          <img src="../../assets/images/pentagon-move-c.svg" width="545" height="545">
         </div>
 
         <div class="pentagon-item fraud">
@@ -78,9 +79,10 @@
 
           <div class="pentagon-item bigdata">
             <img src="../../assets/images/bigdata.svg" width="30" height="30">
-          <div class="text">大数据风控</div>
+            <div class="text">大数据风控</div>
           </div>
       </div>
+
       <div class="adv-button-wrapper">
         <button class="adv-button"> 解决方案 </button>
       </div>
@@ -95,12 +97,19 @@
   import $ from 'jquery';
   export default {
     /* 元素插入后可以用jquery获取页面元素 */
+    created() {},
     mounted() {
       $(function() {
-        $('#advantage-s').on('inview.scrollspy.amui', function() {
-          console.log('进入视口');
+        $('.pentagon-box').scrollspy({
+          animation: 'fade',
+          delay: 0
+        });
+        $('.pentagon-box').on('inview.scrollspy.amui', function() {
+          console.log('五边形动画开始');
+          $('.pentagon-box').addClass('pentagon-box-animation');
         }).on('outview.scrollspy.amui', function() {
-          console.log('离开视口');
+          console.log('五边形动画结束');
+          $('.pentagon-box').removeClass('pentagon-box-animation');
         });
       });
     }
@@ -255,31 +264,6 @@
       text-align: center;
       &:hover {
         .pentagon-item {
-          opacity: 1;
-/*          &.fraud {
-            top: -32px;
-            left: 214px;
-          }
-          &.credit {
-            top: 149px;
-            left: 475px;
-          }
-          &.decompress {
-            top: 467px;
-            left: 372px;
-          }
-          &.customer {
-            top: 467px;
-            left: 48px;
-          }
-          &.bigdata {
-            top: 149px;
-            left: -56px;
-          }
-          .text {
-            opacity: 1;
-            bottom: -38px;
-          }*/
         }
       }
       /* 五边形图片 */
@@ -291,39 +275,19 @@
         display: block;
         opacity: 1;
       }
-      /* 五边形色块 */
+      /* 五边形色块 初始状态 */
       .pentagon-scale {
         position: absolute;
         top: 0;
         left: 0;
         width: 545px;
         height: 545px;
+        transform: scale(0);
         /*background-color: #00afec;*/
         /*background-image: url('../../assets/images/pentagon-move.svg');*/
-        animation-name: pentagon-scale;
-        animation-duration: 5s;
-        animation-timing-function: ease;
-        animation-delay: 1s;
-        animation-iteration-count: infinite;
-        animation-direction: normal;
-        animation-play-state: running;
-        animation-fill-mode: forwards;
-        transform: scale(0.1);
-        transform-origin:50% 299.5px;
-        /*transform: scale3d(.465,.465,.46) translateY(31px);*/
-        @keyframes pentagon-scale
-        {
-          from {
-            transform: scale(0);
-            opacity: .3;
-          }
-          to {
-            transform: scale(1.01);
-            opacity: 1;
-          }
-        }
       }
-      /* 五边形 logo */
+
+      /* 五边形logo 初始状态 */
       .pentagon-item {
         position: absolute;
         top: 236px;
@@ -340,8 +304,13 @@
         img {
           position: relative;
           display: inline-block;
+          top: 24px;
+          left: 6px;
+          width: 66px;
+          height: auto;
         }
         .text {
+          display: none;
           position: absolute;
           left: -60px;
           bottom: 30px;
@@ -352,27 +321,28 @@
           opacity: 0;
           transition: all .4s ease;
           animation-name: textFadeIn;
-          animation-duration: 5s;
+          animation-duration: 2s;
           animation-timing-function: ease;
           animation-delay: 1s;
           animation-iteration-count: 1;
           animation-direction: normal;
           animation-play-state: running;
           animation-fill-mode: forwards;
-          @keyframes textFadeIn
-          {
-            to {
-              opacity: 1;
-              bottom: -38px;
-            }
-          }
         }
+        &.fraud {
+          z-index: 101;
+        }
+      }
+    }
 
+    /* 滚动侦测视口 添加pentagon-box-animation类实现动画 */
+    .pentagon-box-animation {
+      .pentagon-item {
         &.fraud {
           animation-name: fraudScale;
-          animation-duration: 5s;
+          animation-duration: 2s;
           animation-timing-function: ease;
-          animation-delay: 1s;
+          animation-delay: 500ms;
           animation-iteration-count: 1;
           animation-direction: normal;
           animation-play-state: running;
@@ -393,9 +363,9 @@
         }
         &.credit {
           animation-name: creditScale;
-          animation-duration: 5s;
+          animation-duration: 2s;
           animation-timing-function: ease;
-          animation-delay: 1s;
+          animation-delay: 500ms;
           animation-iteration-count: 1;
           animation-direction: normal;
           animation-play-state: running;
@@ -416,9 +386,9 @@
         }
         &.decompress {
           animation-name: decompressScale;
-          animation-duration: 5s;
+          animation-duration: 2s;
           animation-timing-function: ease;
-          animation-delay: 1s;
+          animation-delay: 500ms;
           animation-iteration-count: 1;
           animation-direction: normal;
           animation-play-state: running;
@@ -439,9 +409,9 @@
         }
         &.customer {
           animation-name: customerScale;
-          animation-duration: 5s;
+          animation-duration: 2s;
           animation-timing-function: ease;
-          animation-delay: 1s;
+          animation-delay: 500ms;
           animation-iteration-count: 1;
           animation-direction: normal;
           animation-play-state: running;
@@ -462,9 +432,9 @@
         }
         &.bigdata {
           animation-name: bigdataScale;
-          animation-duration: 5s;
+          animation-duration: 2s;
           animation-timing-function: ease;
-          animation-delay: 1s;
+          animation-delay: 500ms;
           animation-iteration-count: 1;
           animation-direction: normal;
           animation-play-state: running;
@@ -483,8 +453,40 @@
             height: auto;
           }
         }
-
-
+        .text {
+          display: block;
+          @keyframes textFadeIn
+          {
+            to {
+              opacity: 1;
+              bottom: -38px;
+            }
+          }
+        }
+      }
+      /* 五边形色块 放大动画 */
+      .pentagon-scale {
+        animation-name: pentagon-scale;
+        animation-duration: 5s;
+        animation-timing-function: ease;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+        animation-fill-mode: forwards;
+        transform-origin:50% 299.5px;
+        /*transform: scale3d(.465,.465,.46) translateY(31px);*/
+        @keyframes pentagon-scale
+        {
+          from {
+            transform: scale(0);
+            opacity: .3;
+          }
+          to {
+            transform: scale(1.001);
+            opacity: 1;
+          }
+        }
       }
     }
   }

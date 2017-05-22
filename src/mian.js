@@ -4,7 +4,8 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-/* import $ from 'jquery'; */
+import $ from 'jquery';
+import amazeUI from '../static/amazeui.js';
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
