@@ -1,18 +1,33 @@
 <template>
   <div id="app">
+    <ct-header></ct-header>
     <router-view></router-view>
     <ct-footer></ct-footer>
   </div>
 </template>
 
 <script>
-import ctFooter from './components/footer/footer.vue';
+import ctHeader from './components/header/header.vue';
 import mainContent from './components/main/main.vue';
+import ctFooter from './components/footer/footer.vue';
 
 export default {
   components: {
-    'ct-footer': ctFooter,
-    'mainContent': mainContent
+    'ct-header': ctHeader,
+    'mainContent': mainContent,
+    'ct-footer': ctFooter
+  },
+  mounted() {
+    let hash = document.location.hash;
+    let title = document.getElementsByTagName('title')[0].innerText;
+    console.log(hash + title);
+    console.log(this.$route);
+    console.log(this.$route.path);
+    console.log(this.$route.params);
+    console.log(this.$route.query);
+    console.log(this.$route.hash);
+    console.log(this.$route.fullPath);
+    console.log(this.$route.matched);
   }
 };
 </script>

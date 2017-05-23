@@ -2,7 +2,6 @@
   <!-- 页头和轮播图 -->
   <div id="banner">
     <div class="am-container">
-      <ct-header></ct-header>
       <div class="title" data-am-scrollspy="{animation:'fade', delay: 200}">Business AI  &  Big data</div>
       <div class="slogan" data-am-scrollspy="{animation:'fade', delay: 300}">专注于人工智能的金融科技专家</div>
       <div class="description" data-am-scrollspy="{animation:'fade', delay: 400}">
@@ -16,11 +15,8 @@
 
 <script type="text/ecmascript-6">
   import $ from 'jquery';
-  import ctHeader from '../header/header.vue';
   export default {
-    components: {
-      'ct-header': ctHeader
-    },
+    components: {},
     beforeMount() {},
     mounted() {
       $(function () {

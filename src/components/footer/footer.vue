@@ -45,7 +45,7 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="less" type="text/less">
+<style lang="less" type="text/less" scoped>
   #footer {
     width: 100%;
     height: auto;

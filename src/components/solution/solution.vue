@@ -1,7 +1,6 @@
 <template>
   <div>
     <div id="solution-banner">
-      <ct-header></ct-header>
       <div class="banner-txt">
         <h1 data-am-scrollspy="{animation:'fade', delay: 200}">金融行业解决方案</h1>
         <p data-am-scrollspy="{animation:'fade', delay: 300}">以大数据、人工智能技术为基础，为金融机构提供具有产业化和产品化能力的整体解决方案</p>
@@ -112,11 +111,8 @@
 
 <script type="text/ecmascript-6">
   import $ from 'jquery';
-  import ctHeader from '../header/header.vue';
   export default {
-    components: {
-      'ct-header': ctHeader
-    },
+    components: {},
     mounted() {
       $(function() {
         let $h1 = $('.banner-txt h1');
@@ -164,7 +160,6 @@
   margin:0px auto 0px auto;
   overflow:hidden;
   height: 350px;
-  max-width: 1200px;
 }
 .solution-bg {
   background:#f5f6fa;
@@ -259,5 +254,39 @@
     font-weight: normal;
     padding-top: 40px;
   }
+}
+
+.choose-box {
+  width: 100%;
+  background: url(../../assets/images/choose_us.jpg) no-repeat center;
+  background-size: cover;
+  height: 235px;
+  margin: 0 auto;
+}
+
+.choose-box h1{
+  text-align: center;
+  padding: 45px 0 25px;
+  color: #3c3c42;
+  font-size: 24px;
+}
+.choose-txt{
+  background: url(../../assets/images/line.png) right no-repeat;
+  float: left;
+}
+.choose-txtno{
+  background: none;
+}
+.choose-txt h2{
+  text-align: center;
+  color: #1e1e23;
+  font-size: 18px;
+  padding-bottom: 18px;
+}
+.choose-txt p{
+  text-align: center;
+  color: #1e1e23;
+  font-size: 14px;
+  line-height: 24px;
 }
 </style>
